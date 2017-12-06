@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <math.h>
+#include <iostream>
+using namespace std;
+int main()
+{
+	int choice;
+	float
+		length,
+		width,
+		radius;
+	const int  square_room = 1;
+	const int  rectangle_room = 2;
+	const int  circle_room = 3;
+	float const num_pi = 3.14;
+
+	cout << "Haverly’s Room Calculator:.\n";
+	cout << "***************************.\n";
+	cout << "1. Square Room.\n";
+	cout << "2. Rectangular Room.\n";
+	cout << "3. Round Room.\n";
+	cout << "4. Quit.\n";
+
+	cout << "Please enter a menu item <1 - 4>.\n";
+	cout << "Enter 1, 2, 3, or 4.\n";
+	cin >> choice;
+
+	switch (choice)
+	{
+	case square_room:
+		cout << "What is room length" << endl;
+		cin >> length;
+		cout << "The area is " << length * length;   //calculate square room
+		break;
+
+	case rectangle_room:
+		cout << "What is room length" << endl;
+		cin >> length;
+		cout << "What is room width" << endl;
+		cin >> width;
+		cout << "The area is " << length * width;  //calculate rectangle room
+		break;
+
+	case circle_room:
+		cout << "Round Room.\n";
+		cout << "What is room radius" << endl;
+		cin >> radius;
+		cout << "The area is " << num_pi * radius; //calculate circular room
+		break;
+	case 4:
+		cout << "Invalid choice" << endl;
+		cout << "please try again: " << endl;
+		cin >> choice;
+		break;
+	default:
+		cout << "invalid menu item entered...Program Exiting...Press any key to continue. .";
+		exit(0);
+	}
+
+	return 0;
+}
